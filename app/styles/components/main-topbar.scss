@@ -1,0 +1,27 @@
+.cs-main-topbar {
+  display:flex;
+  align-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid $light-gray3;
+  font-size: $font-size - .25;
+  font-weight: 300;
+  background-color: $light-gray;
+
+  a, a:hover, a:focus, a:visited {
+    color: $medium-gray2;
+  }
+
+  .cs-tab-types {
+    flex: 1;
+
+    a {
+      margin-right: 20px;
+      color: $medium-gray2;
+    }
+
+    .active {
+      color: black;
+      font-weight: 600;
+    }
+  }
+}

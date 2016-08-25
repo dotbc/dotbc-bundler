@@ -1,0 +1,50 @@
+{{card-backbar backClicked="backClicked" text="Back to Accounts"}}
+<div class="cs-account-card-expanded-container">
+  <div class="cs-account-card-expanded">
+    <div class="media-container">
+      <img class="cs-account-image"
+        src="https://i.scdn.co/image/94c531c2ed71ce23d704d7f63a168c0287bbbb23"/>
+      <span>Verifications</span>
+      <div class="cs-account-verifications">
+        <img class="account-verification-icon" src="images/icon-spotify-button.svg"/>
+        <img class="account-verification-icon" src="images/icon-spotify-button.svg"/>
+        <img class="account-verification-icon" src="images/icon-spotify-button.svg"/>
+      </div>
+    </div>
+    <div class="cs-account-info-container">
+      <div class="cs-account-header">
+        <div class="cs-account-name">Jack Finio</div>
+      </div>
+      <table class="expanded-account-info-table">
+        <tr>
+          <td class="account-key">records as</td>
+          <td class="account-value">Jack Finio</td>
+        </tr>
+        <tr>
+          <td class="account-key">contact</td>
+          <td class="account-value">jfinio@gmail.com</td>
+        </tr>
+        <tr>
+          <td class="account-key">ISC roles</td>
+          <td class="account-value">Composer, Author</td>
+        </tr>
+        <tr>
+          <td class="account-key">IPI #</td>
+          <td class="account-value">I-000000229-7</td>
+        </tr>
+        <tr>
+          <td class="account-key">Region</td>
+          <td class="account-value">United States of America</td>
+        </tr>
+        <tr>
+          <td class="account-key">Payment</td>
+          <td class="account-value">PayPal</td>
+        </tr>
+      </table>
+    </div>
+    <img class="work-edit-icon" src="images/icon-edit.svg" {{action "editWork"}} />
+  </div>
+</div>
+{{#if isEditing}}
+  {{account-edit-modal closeModal="endEditing"}}
+{{/if}}

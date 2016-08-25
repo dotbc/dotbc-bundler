@@ -1,0 +1,13 @@
+.cs-editor-container {
+  display:flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: white;
+  $component-top-margin: 30px;
+  margin: 50px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0px;
+  max-height: 80%;
+
+}

@@ -1,0 +1,17 @@
+.cs-account-add {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: $sidebar-avatar-width;
+  height: $sidebar-avatar-width;
+  background-color: $medium-gray2;
+  margin: auto;
+  border-radius: $avatar-border-radius;
+  font-size: $font-size + .20;
+  font-weight: 300;
+
+  span {
+    width: 100%;
+    color: $light-gray;
+  }
+}

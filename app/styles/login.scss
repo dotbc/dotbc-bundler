@@ -1,0 +1,43 @@
+.cs-login-container {
+  background-color: transparent;
+  $component-top-margin: 30px;
+  margin: 50px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px 150px;
+  max-height: 80%;
+  font-size: $font-size + .75;
+  font-weight: 300;
+  color: white;
+
+  .login-header {
+    padding: 20px;
+    font-size: $font-size + 1;
+  }
+
+  .errormessage {
+    background-color: transparent;
+    font-size: $font-size - .5;
+  }
+
+  .cs-login-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    .cs-login-input-layout {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 300px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+
+    .cs-login-button {
+      width: 150px;
+    }
+  }
+}

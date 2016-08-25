@@ -1,0 +1,54 @@
+<div class="cs-card-details cs-card-details-layout {{work.typeClassName}}">
+  <div class="cs-card-details-left">
+    {{card-work-type work=work cardType="Details" editWork="editWork"}}
+    <div class="meta-content-container">
+      <div class="meta-info-container">
+        <div class="meta-title">
+          {{work.name}}
+        </div>
+        <table class="meta-info-table">
+          {{#each work.metadataValues as |attr|}}
+            <tr>
+              <td class="meta-key">{{attr.attribute.name}}</td>
+              <td class="meta-value" {{action "editWork"}}>
+                {{#if (eq attr.attribute.type 'artist')}}
+                  {{#each attr.value as |artist index|}}
+                    {{artist.name}}<br />
+                  {{/each}}
+                {{else if (eq attr.attribute.type 'work')}}
+                  {{#each compositions as |comp index|}}
+                    {{card-summary work=comp}}
+                  {{/each}}
+                {{else}}
+                  {{attr.value}}
+                {{/if}}
+              </td>
+            </tr>
+          {{/each}}
+          <tr>
+            <td class="meta-key">Registration Receipts</td>
+            <td class="meta-value">
+              <img {{action "sendToMonegraph" work}} class="entity-verified" src="images/icon-monegraph-search.png" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="cs-card-details-right">
+    {{file-list work=work}}
+    <div class="cs-card-dotbc-info">
+      <div class="blockchain-number-title">Blockchain #</div>
+      <div class="blockchain-number" {{action "sendToMonegraph" work}}>
+        <span class="blockchain-number-group1">6a</span><span class="blockchain-number-group2">25</span><span class="blockchain-number-group3">4d47</span><span class="blockchain-number-group4">ffff</span><span class="blockchain-number-group5">04</span><span class="blockchain-number-group6">b871259812d43ab73c9a3ec36cced2a299fc5b1a19ff1284813d75c031399a54</span>
+      </div>
+      <button class="download-bc-file-button" {{action "sendToMonegraph" work}}>
+        download .bc file
+      </button>
+    </div>
+  </div>
+</div>
+
+{{#if isEditing}}
+  {{card-edit-modal work=work closeModal="endEditing"}}
+{{/if}}

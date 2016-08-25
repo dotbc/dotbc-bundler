@@ -1,0 +1,13 @@
+<div class="cs-work-type {{cardClassName}} {{work.typeClassName}}">
+  {{#if work.isRecording}}
+    {{icon-recording}}
+    <span>Recording</span>
+  {{else if work.isComposition}}
+    {{icon-composition}}
+    <span>Composition</span>
+  {{/if}}
+
+  {{#if editWork}}
+    <img class="work-edit-icon" src="images/icon-edit.svg" {{action "editWork"}} />
+  {{/if}}
+</div>

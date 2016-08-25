@@ -1,0 +1,66 @@
+<div class="cs-editor-layout">
+  <span class="input-label">{{attr.attribute.name}}</span>
+  <div class="entity-lookup-container">
+    {{#each attrValue as |entity index|}}
+      <div class="entity-lookup-added {{if noMoreSelectionsAllowed "disallow-multiple"}}">
+        <span class="entity-name">
+          {{entity.name}}
+          {{#if (not entity.href)}}
+            <span class="entity-unverified">Unverified</span>
+          {{/if}}
+        </span>
+        {{#if entity.pluginsearchimage}}
+        <a href="{{entity.humanhref}}" target="_blank">
+          <img class="entity-verified" src="{{entity.pluginsearchimage}}"/>
+        </a>
+        {{/if}}
+        <span class="entity-remove" {{action "removeEntity" index}}>remove</span>
+      </div>
+    {{/each}}
+    {{#if (not noMoreSelectionsAllowed)}}
+      <div class="entity-lookup-input">
+        {{icon-composition}}
+        <input id="cs-editor-{{attr.attribute.propertyName}}" type="text" placeholder="+ Add {{attr.attribute.name}}"
+          class="entity-lookup-field"
+          {{action "focusIn" on="focusIn"}}
+          {{action "focusOut" on="focusOut"}}
+          {{action "keyPress" on="keyUp"}}>
+        <button class="add-resultbtn {{if noSearchResults "" "hide"}}" {{action "resultClick"}}>+ add unverified</button>
+      </div>
+      {{#if showSearch}}
+        <div class="entity-providers">
+          <div>Search:</div>
+          {{#each pluginsForEntityType as |plugin|}}
+            <div class="entity-provider {{if (not (eq selectedSearchProvider plugin)) "dim"}}" {{action "entityProviderClick" plugin}}>
+              <img class="entity-verified" src="{{plugin.searchImageUrl}}"/>
+            </div>
+          {{/each}}
+        </div>
+        <div class="search-results-container">
+          <div class="search-results">
+            <div class="search-result-header">{{attr.attribute.type}}s</div>
+            {{#each searchResults as |result|}}
+              <div class="search-result {{if (eq selectedResult result) "info-shown"}}"
+                {{action "resultMouseEnter" result on="mouseEnter"}}
+                {{action "resultClick" result}}>
+                <span class="search-result-column">{{result.name}}</span>
+                {{#if result.artist}}
+                  <span class="search-result-column">{{result.artist}}</span>
+                {{/if}}
+                {{#if result.workId}}
+                  <span class="search-result-column">{{result.workId}}</span>
+                {{/if}}
+                <button class="add-resultbtn">Add</button>
+              </div>
+            {{/each}}
+          </div>
+          {{#if (eq attr.attribute.type "artist")}}
+            <div class="search-result-info">
+              {{entity-result-info entity=selectedResult}}
+            </div>
+          {{/if}}
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>

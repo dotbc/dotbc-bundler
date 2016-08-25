@@ -1,0 +1,14 @@
+{
+  "name": "cardstack-desktop",
+  "dependencies": {
+    "ember": "~2.5.0",
+    "ember-cli-shims": "0.1.1",
+    "ember-cli-test-loader": "0.2.2",
+    "ember-qunit-notifications": "0.1.0",
+    "pretender": "~0.10.1",
+    "lodash": "~4.13.1",
+    "Faker": "~3.0.0",
+    "font-source-sans-pro": "^0.1.0",
+    "font-awesome": "~4.5.0"
+  }
+}

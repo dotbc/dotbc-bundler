@@ -1,0 +1,60 @@
+$avatar-border-width: 3px;
+$avatar-border-radius: 5px;
+
+$sidebar-avatar-width: 70px;
+$sidebar-padding: 20px;
+$sidebar-width: $sidebar-avatar-width + 2 * $sidebar-padding + 2 * $avatar-border-width;
+
+$canvas-margin: 50px;
+$card-summary-width: 300px;
+$card-summary-min-height: 145px;
+
+$font-size: 1em;
+
+/* For ember-modal-dialog addon */
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+@import "./fonts";
+@import "./mixins";
+@import "./colors";
+@import "./login";
+
+@import "./common/cards";
+@import "./common/modal";
+
+@import "./components/all";
+
+@import "./accounts/index";
+@import "./plugins/index";
+@import "./works/index";
+@import "./works/work";
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: $light-gray2;
+  font-family: 'Source Sans Pro', Arial;
+  font-weight: 400;
+  color: $dark-gray-text;
+}
+
+a, a:hover, a:focus, a:visited {
+  color: $link-blue;
+  text-decoration: none;
+}
+
+.cs-main {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+
+  .cs-content {
+    flex: 1;
+    overflow-y: auto;
+  }
+}

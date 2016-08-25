@@ -1,0 +1,22 @@
+.cs-card-add {
+  @include add-new-card;
+  flex: 1;
+  cursor: pointer;
+
+  & > div {
+    margin: 40px 0px;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+
+    g, g path {
+      fill: $medium-gray;
+    }
+
+    circle {
+      fill: transparent;
+    }
+  }
+}

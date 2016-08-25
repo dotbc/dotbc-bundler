@@ -1,0 +1,12 @@
+<div class="cs-card-add" {{action "click"}}>
+  <div>
+    <div>
+      {{#if isRecording}}
+        {{icon-recording}}
+      {{else if isComposition}}
+        {{icon-composition}}
+      {{/if}}
+    </div>
+    + Add {{type}}
+  </div>
+</div>

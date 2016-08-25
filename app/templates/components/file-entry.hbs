@@ -1,0 +1,47 @@
+<div class="cs-file {{if expanded 'expanded'}}" {{action 'click'}}>
+  <div class="cs-file-information">
+    {{#if medium.isAudio}}
+      {{#if playing}}
+        <img class="cs-audio-pause" src="images/icon-pause.svg" {{action 'pause' bubbles=false}}/>
+      {{else}}
+        <span {{action 'play' bubbles=false}}>{{icon-play}}</span>
+      {{/if}}
+    {{else if medium.isImage}}
+      {{icon-img}}
+    {{else if medium.isText}}
+      {{icon-txt}}
+    {{/if}}
+    <span class="cs-file-name">{{medium.filename}}</span>
+    <img class="cs-file-expand" src="images/icon-{{if expanded 'contract' 'expand'}}.svg"/>
+  </div>
+  {{#if expanded}}
+    <div class="cs-file-preview">
+      {{#if medium.isAudio}}
+        <div class="audio-progress">
+          <div class="audio-gray">
+          </div>
+          <div class="audio-red">
+          </div>
+        </div>
+        <div class="audio-time">
+          0:00
+        </div>
+      {{else if medium.isImage}}
+        <img class="cs-image-preview"/>
+      {{else if medium.isText}}
+        <div class="cs-text-preview">
+          Preview
+        </div>
+      {{/if}}
+    </div>
+    <div class="cs-file-controls">
+      <div class="controls-upload-date">
+        <span class="upload-text">Uploaded: </span>
+        January 26th 2016
+      </div>
+      <div class="controls-delete" {{action 'delete'}}>
+        Delete
+      </div>
+    </div>
+  {{/if}}
+</div>

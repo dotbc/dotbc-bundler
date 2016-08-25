@@ -1,0 +1,35 @@
+{{#modal-dialog
+  overlay-class="cs-modal-overlay"
+  container-class="cs-editor-container"
+  close="cancel"}}
+  <div class="cs-editor">
+    {{card-work-type work=work cardType="Details"}}
+    <div class="cs-metadata-editor {{work.typeClassName}}">
+      <div class="main-artist-editor cs-editor-layout">
+        <span class="input-label">Work Title</span>
+        <input id="cs-editor-name" type="text" placeholder="Enter the title" class="cs-editor-text-input" value="{{work.name}}">
+      </div>
+      {{#each work.metadataValues as |attr index|}}
+        {{#if (eq attr.attribute.type "text")}}
+          <div class="main-artist-editor cs-editor-layout">
+            <span class="input-label">{{attr.attribute.name}}</span>
+            <input id="cs-editor-{{attr.attribute.propertyName}}" type="text" placeholder="Enter the {{attr.attribute.name}}" class="cs-editor-text-input" value="{{attr.value}}">
+          </div>
+        {{else}}
+          {{entity-search attr=attr work=work}}
+        {{/if}}
+      {{/each}}
+    </div>
+    <div class="cs-editor-button-container {{work.typeClassName}}">
+      <button class="cs-editor-cancelbtn" {{action "cancel"}}>Cancel</button>
+      <button class="cs-editor-savebtn {{unless saveEnabled 'disabled'}}" {{action "save"}}>Save</button>
+    </div>
+  </div>
+  <div class="cs-file-editor">
+    {{file-list
+      showAddButton=true
+      work=work
+      filesUploading="filesUploading"
+      filesUploaded="filesUploaded"}}
+  </div>
+{{/modal-dialog}}

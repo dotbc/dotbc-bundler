@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'monegraph-font';
+  src:url('../fonts/monegraph-font.eot');
+  src:url('../fonts/monegraph-font.eot') format('embedded-opentype'),
+    url('../fonts/monegraph-font.ttf') format('truetype'),
+    url('../fonts/monegraph-font.woff') format('woff'),
+    url('../fonts/monegraph-font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'monegraph-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-monegraph-m:before {
+  content: "\6d";
+}
+.icon-monegraph-m-cap:before {
+  content: "\4d";
+}

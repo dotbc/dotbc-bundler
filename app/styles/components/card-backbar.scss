@@ -1,0 +1,12 @@
+.cs-card-backbar {
+  display: flex;
+  padding: 15px 15px 0px;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    height: 15px;
+    margin-right: 6px;
+    @include x-browser(transform, rotate(180deg));
+  }
+}

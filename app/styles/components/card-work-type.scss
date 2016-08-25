@@ -1,0 +1,33 @@
+.cs-work-type {
+  @include card-work-type;
+
+  &.cs-work-recording {
+    color: $blue;
+    border-bottom: 1px $light-blue solid;
+  }
+
+  &.cs-work-composition {
+    color: $green;
+    border-bottom: 1px $light-green solid;
+  }
+}
+
+.cs-work-type-details {
+  text-align: left;
+  display: flex;
+  margin-top: 12px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  & > svg {
+    left: 20px;
+  }
+
+  img {
+    height: 16px;
+    position: relative;
+    top: -8px;
+    right: 4px;
+    cursor: pointer;
+  }
+}

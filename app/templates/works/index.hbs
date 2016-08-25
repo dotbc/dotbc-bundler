@@ -1,0 +1,25 @@
+{{search-topbar
+  showRecordings="showRecordings"
+  showCompositions="showCompositions"
+  searchWorks="searchWorks"
+  showingRecordings=showingRecordings
+  showingCompositions=showingCompositions}}
+<div class="cs-card-container cs-work-card-container">
+  {{card-add type="New Entry" click="addNewWork"}}
+
+  {{#each works as |work|}}
+    {{card-summary
+      work=work
+      goToWork="goToWork"}}
+  {{/each}}
+
+</div>
+
+{{#if showNewWorkModal}}
+  {{new-work-modal cancel="cancelNewWork"
+  createComposition="createComposition"
+  createRecording="createRecording"}}
+{{/if}}
+{{#if showCreateWorkModal}}
+  {{card-edit-modal work=newWork closeModal="endEditing"}}
+{{/if}}

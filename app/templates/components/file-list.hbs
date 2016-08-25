@@ -1,0 +1,17 @@
+<div class="cs-files-header">Files</div>
+{{#each media as |medium|}}
+  {{file-entry
+    medium=medium
+    mediumExpanded="mediumExpanded"
+    expandedMedium=expandedMedium}}
+{{/each}}
+
+<audio id="cs-audio-preview"></audio>
+
+{{#if showAddButton}}
+  {{#x-file-input multiple=true action=(action "didSelectFiles")}}
+    <div class="cs-file-add-new cs-card-add">
+      <div>+ add new file</div>
+    </div>
+  {{/x-file-input}}
+{{/if}}

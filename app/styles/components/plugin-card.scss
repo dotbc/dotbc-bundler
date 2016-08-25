@@ -1,0 +1,62 @@
+.cs-plugin-card{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 330px;
+  min-height: 200px;
+  padding: 15px;
+  @include card-shadow();
+  cursor: pointer;
+
+  .cs-plugin-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    img{
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      border-radius: 4px;
+    }
+
+    .cs-plugin-name {
+      font-size: $font-size + .7;
+      color: black;
+      font-weight: 400;
+    }
+  }
+
+  .cs-plugin-description {
+    color: black;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: $font-size - .1;
+    flex: 1;
+  }
+
+  .cs-plugin-actions {
+    display: flex;
+    align-items: baseline;
+
+    .plugin-btn-layout {
+      border: none;
+      background-color: transparent;
+      color: $medium-gray;
+      padding: 0;
+      margin-right: 10px;
+      font-weight: 300;
+      outline: none;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .plugin-removebtn {
+      flex: 1;
+      text-align: left;
+    }
+  }
+}

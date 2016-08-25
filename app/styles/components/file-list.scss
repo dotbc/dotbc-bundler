@@ -1,0 +1,27 @@
+.cs-files {
+  @include gray-right-pane;
+}
+
+.cs-files-header {
+  font-size: $font-size + 0.2;
+  margin-bottom: 20px;
+}
+
+.x-file--input + label {
+    display: block;
+}
+
+.x-file-input label {
+  outline: none !important;
+}
+
+.cs-file-add-new {
+  width: 100%;
+  margin: 0px;
+  margin-top: 20px;
+  min-height: 0px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: $font-size - 0.2;
+  cursor: pointer;
+}

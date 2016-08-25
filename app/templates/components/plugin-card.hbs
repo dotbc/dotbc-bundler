@@ -1,0 +1,24 @@
+<div class="cs-card-container cs-account-card-container" {{action "goToPlugin"}}>
+  <div class="cs-plugin-card">
+    <div class="cs-plugin-header">
+      <img class="cs-plugin-image" src="{{plugin.imageUrl}}"/>
+      <div class="cs-plugin-name">{{plugin.displayName}}</div>
+    </div>
+    <div class="cs-plugin-description">
+      {{plugin.description}}
+      <br /><br />
+      <div>
+        Supported entity search types:
+        {{#each plugin.supportedSearchTypes as |type|}}
+          <div><strong>{{type}}</strong></div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="cs-plugin-actions">
+      <button class="plugin-disablebtn plugin-btn-layout">Disable</button>
+      <span class="plugin-btn-seperator plugin-btn-layout">|</span>
+      <button class="plugin-removebtn plugin-btn-layout">Remove</button>
+      <button class="plugin-settingsbtn plugin-btn-layout">Settings</button>
+    </div>
+  </div>
+</div>

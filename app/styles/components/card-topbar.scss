@@ -1,0 +1,26 @@
+$side-padding: 15px;
+
+.cs-work-titlebar {
+  display: flex;
+  margin: 10px $side-padding;
+  color: black;
+  align-items: baseline;
+  position: relative;
+
+  .cs-titlebar-name {
+    font-size: $font-size + .25;
+    margin-right: 5px;
+  }
+
+  .cs-titlebar-artisit {
+
+  }
+
+  .cs-titlebar-close {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    right: 0;
+  }
+}

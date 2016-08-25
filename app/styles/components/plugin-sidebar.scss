@@ -1,0 +1,60 @@
+.cs-plugin-sidebar {
+  background-color: $light-gray;
+  width: 200px;
+  height: 100%;
+  border-left: 1px solid $light-gray3;
+
+  $plugin-font-size: $font-size - .1;
+  $plugin-font-weight: 300;
+
+  .cs-plugin-title {
+    padding: 10px 16px;
+    color: $medium-gray;
+    font-size: .5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .cs-plugin-button {
+    padding: 10px 10px 10px 16px;
+    margin: 1px 0;
+    background-color: $medium-gray3;
+    font-weight: $plugin-font-weight;
+    font-size: $plugin-font-size;
+    display: block;
+    color: black;
+
+    &::after {
+      content: url("../images/icon-chevron.svg");
+      margin-right: 3px;
+      width: $plugin-font-size - .35;
+      height: $plugin-font-size - .35;
+      display: inline-block;
+      float: right;
+      margin-top: 2px;
+    }
+  }
+
+  .cs-search-container {
+    display: flex;
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      color: $dark-gray2;
+      @include x-browser(transform, translateY(-50%));
+    }
+
+    .cs-plugin-search {
+      border: none;
+      border-radius: 4px;
+      padding: 10px 5px 10px 40px;
+      margin: 8px 8px;
+      width: 100%;
+      font-size: $plugin-font-size;
+      font-weight: $plugin-font-weight - 100;
+    }
+  }
+}

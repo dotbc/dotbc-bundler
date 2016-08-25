@@ -1,0 +1,132 @@
+.cs-card-details {
+  $card-side-padding: 20px;
+  background-color: white;
+  display: flex;
+  min-width: 460px;
+  margin: 20px;
+  @include card-shadow;
+
+  .cs-card-details-left {
+    flex: 1;
+    min-width: 400px;
+
+    .meta-content-container {
+      display: flex;
+      margin-top: 35px;
+
+      .meta-info-container {
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+
+        .meta-title {
+          color: black;
+          font-size: $font-size + .25;
+          margin: 0px $card-side-padding 25px $card-side-padding;
+        }
+
+        .meta-info-table {
+          margin: 0px $card-side-padding 10px;
+
+          .meta-key {
+            text-transform: uppercase;
+            font-size: $font-size - .2;
+            font-weight: 600;
+            vertical-align: baseline;
+            /* width: 30%; */ /* Removing because it looks better with everything on one line. */
+            padding-right: 20px;
+            padding-bottom: 10px;
+          }
+
+          .meta-key-top {
+            vertical-align: top;
+          }
+
+          .meta-value {
+            vertical-align: baseline;
+            padding-bottom: 10px;
+
+            .cs-work-type svg {
+              height: 35px;
+              width: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cs-card-details-right {
+    @include gray-right-pane;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &.cs-work-recording {
+    .meta-key {
+      color: $blue;
+    }
+  }
+
+  &.cs-work-composition {
+    .meta-key {
+      color: $green;
+    }
+  }
+
+  .cs-card-dotbc-info {
+    background-color: $dark-gray3;
+    padding: 10px;
+    margin: 15px -20px -15px -20px;
+    word-break: break-all;
+    word-wrap: break-word;
+
+    .blockchain-number-title {
+      margin-bottom: 5px;
+      color: white;
+      text-transform: uppercase;
+      font-size: $font-size - 0.3;
+      font-weight: bold;
+    }
+
+    .blockchain-number {
+      cursor: pointer;
+    }
+
+    .blockchain-number-group1 {
+      color: #a9218e;
+    }
+    .blockchain-number-group2 {
+      color: #5861a9;
+    }
+    .blockchain-number-group3 {
+      color: #008ccc;
+    }
+    .blockchain-number-group4 {
+      color: #009786;
+    }
+    .blockchain-number-group5 {
+      color: #57b947;
+    }
+    .blockchain-number-group6 {
+      color: #bed12b;
+    }
+
+    .download-bc-file-button {
+      background-color: black;
+      text-align: center;
+      color: white;
+      font-size: $font-size;
+      width: 100%;
+      font-weight: 500;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+  }
+}

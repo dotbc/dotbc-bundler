@@ -1,0 +1,8 @@
+img {
+  display: block;
+  margin-bottom: 16px;
+  border-radius: $avatar-border-radius;
+  border: $avatar-border-width solid white;
+  width: $sidebar-avatar-width;
+  height: $sidebar-avatar-width;
+}

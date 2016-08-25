@@ -1,0 +1,52 @@
+.cs-account-card {
+  margin: 5px;
+  display: flex;
+  background-color: white;
+  width: 302px;
+  max-height: 147px;
+  @include card-shadow();
+  cursor: pointer;
+  padding: 15px 0 0 15px;
+
+
+  .cs-account-image {
+    margin-bottom: 30px;
+    width: 75px;
+    height: 75px;
+    border: 1px solid $medium-gray;
+    border-radius: 3px;
+  }
+
+  .cs-account-info-container{
+    flex: 1;
+  }
+
+  .cs-account-header {
+    border-bottom: 1px solid $light-gray;
+
+    .cs-account-name {
+      margin-left: 10px;
+      color: black;
+      font-size: $font-size + .25;
+    }
+  }
+
+  .account-info-table {
+    margin: 10px 0 0 10px;
+    $table-padding: 0 5px 5px 0;
+
+    .account-key {
+      text-transform: uppercase;
+      color: $medium-gray;
+      font-size: $font-size - .4;
+      padding: $table-padding;
+    }
+
+    .account-value {
+      font-size: $font-size - .3;
+      font-weight: 300;
+      color: black;
+      padding: $table-padding;
+    }
+  }
+}

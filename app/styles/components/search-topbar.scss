@@ -1,0 +1,62 @@
+.cs-search-topbar {
+  display: flex;
+  background-color: $light-gray2;
+  border-bottom: 1px solid $light-gray3;
+  padding: 8px 20px;
+  align-items: center;
+  $icon-width: 20px;
+
+  svg {
+    width: $icon-width;
+    height: $icon-width;
+    cursor: pointer;
+  }
+
+  .off svg {
+    g, path {
+      fill: $dark-gray2;
+    }
+  }
+
+  .cs-search-divider {
+    width: 1px;
+    background-color: $light-gray3;
+    height: $icon-width;
+  }
+
+  .cs-search-margin, i, svg {
+    margin-right: 15px;
+  }
+
+  .cs-library-search {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+    font-size: $font-size - .25;
+    font-weight: 300;
+    outline: 0;
+    margin-left: -10px;
+  }
+
+  .cs-search-tag {
+    $search-font-size: $font-size - .15;
+    background-color: $dark-gray2;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: $search-font-size;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+      content: url("../images/icon-close.svg");
+      margin-right: 8px;
+      width: $search-font-size;
+      height: $search-font-size;
+      display: inline-block;
+    }
+  }
+}

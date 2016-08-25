@@ -1,0 +1,61 @@
+.cs-new-work-container {
+  background-color: transparent;
+  flex: 1;
+  $component-top-margin: 30px;
+  margin: 50px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 75px 150px;
+  max-height: 80%;
+  font-size: $font-size + .75;
+  font-weight: 300;
+  color: white;
+  border: 1px dashed $dark-gray2;
+
+  .new-work-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .button-layout {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    $top-padding: 10px;
+    $icon-size: 35px;
+    padding: $top-padding 15px;
+    @include x-browser(transition, background-color 0.25s);
+    border-radius: (2 * $top-padding + $icon-size)/2;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    & > * {
+      margin-right: 10px;
+    }
+
+    svg {
+      width: $icon-size;
+      height: $icon-size;
+    }
+  }
+
+  .cs-new-work-button-container {
+    display:flex;
+    flex-direction: column;
+    font-size: $font-size - .2;
+    font-weight: 300;
+  }
+
+  .cs-new-work-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+  }
+}

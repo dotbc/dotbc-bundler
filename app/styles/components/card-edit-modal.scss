@@ -1,0 +1,145 @@
+$general-border: 1px solid rgba(0, 0, 0, 0.1);
+$general-border-radius:4px;
+$input-margin: 5px 0;
+
+.cs-editor-container {
+  display:flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: white;
+  $component-top-margin: 30px;
+  margin: 50px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0px;
+  max-height: 80%;
+
+  input[type="text"] {
+    font-size: $font-size + 0.4;
+    border-radius: $general-border-radius;
+    border: $general-border;
+    font-weight: 300;
+  }
+
+  .cs-editor-layout {
+    display: flex;
+    flex-direction: column;
+    margin: $component-top-margin 0;
+    text-transform: uppercase;
+    font-size: $font-size - .25;
+
+    $input-padding: 10px;
+
+    .cs-editor-text-input {
+      padding: $input-padding $input-padding;
+      margin: $input-margin;
+    }
+
+    .cs-contributors-input {
+      padding: $input-padding $input-padding;
+    }
+  }
+
+  .cs-editor {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 700px;
+    $side-padding: 20px;
+
+    .cs-metadata-editor {
+      overflow-y: auto;
+      flex: 1;
+      padding: 10px $side-padding 0;
+
+      &.cs-work-recording {
+        .input-label {
+          color: $blue;
+        }
+      }
+
+      &.cs-work-composition {
+        .input-label {
+          color: $green;
+        }
+      }
+    }
+    .cs-delete-workbtn{
+      color: white;
+      background-color: $red;
+      border: none;
+      width: 200px;
+      height: 40px;
+      font-size: $font-size;
+      font-weight: 300;
+      border-radius: 10px;
+      margin: 0 0 20px 200px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .cs-editor-button-container {
+      display: flex;
+      align-items: center;
+      $button-padding: 10px;
+      $border-weight: 1px;
+      justify-content: flex-end;
+      padding: 10px $side-padding;
+
+      button {
+        width: 100px;
+      }
+
+      .cs-editor-cancelbtn {
+        padding: $button-padding - $border-weight;
+        background-color: white;
+        border-radius: $avatar-border-radius;
+        bottom: auto;
+        margin: 0 20px 0 0;
+
+      }
+
+      .cs-editor-savebtn {
+        padding: $button-padding $button-padding + $border-weight;
+        color: white;
+        border: none;
+        border-radius: $avatar-border-radius;
+        @include x-browser(transition, opacity 0.2s);
+
+        &.disabled {
+          opacity: 0.5;
+        }
+      }
+
+      &.cs-work-recording {
+        border-top: 2px $light-blue solid;
+
+        .cs-editor-cancelbtn {
+          border: $border-weight solid $blue;
+          color: $blue;
+        }
+        .cs-editor-savebtn {
+          background-color: $blue;
+
+        }
+      }
+
+      &.cs-work-composition {
+        border-top: 2px $light-green solid;
+
+        .cs-editor-cancelbtn {
+          border: $border-weight solid $green;
+          color: $green;
+        }
+        .cs-editor-savebtn {
+          background-color: $green;
+        }
+      }
+    }
+  }
+
+  .cs-file-editor {
+    @include gray-right-pane;
+    overflow-y: auto;
+  }
+}

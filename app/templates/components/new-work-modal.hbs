@@ -1,0 +1,23 @@
+{{#modal-dialog
+  overlay-class="cs-modal-overlay"
+  container-class="cs-new-work-container"
+  close="cancel"}}
+  <div class="new-work-header">What type of new entry?</div>
+  <div class="cs-new-work-button-container {{work.typeClassName}}">
+    <div class="cs-new-recording button-layout" {{action "createRecording"}}>
+      {{icon-recording}}
+      Recording
+    </div>
+    <div class="cs-new-composition button-layout" {{action "createComposition"}}>
+      {{icon-composition backgroundColor="transparent"}}
+      Composition
+    </div>
+    <div class="cs-new-combo button-layout">
+      {{icon-recording}}
+      <span>+</span>
+      {{icon-composition backgroundColor="transparent"}}
+      Recording and Composition
+    </div>
+  </div>
+  <img class="cs-new-work-close" src="images/icon-close-white.svg"  {{action "cancel"}}/>
+{{/modal-dialog}}

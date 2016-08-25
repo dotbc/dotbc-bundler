@@ -1,0 +1,34 @@
+{{#if isExpanded}}
+  {{account-card-expanded}}
+{{else}}
+  <div class="cs-card-container cs-account-card-container">
+    <div class="cs-account-card" {{action "expandAccount"}}>
+      <img class="cs-account-image"
+        src="https://i.scdn.co/image/94c531c2ed71ce23d704d7f63a168c0287bbbb23"/>
+      <div class="cs-account-info-container">
+        <div class="cs-account-header">
+          <div class="cs-account-name">Jack Finio</div>
+        </div>
+        <table class="account-info-table">
+          <tr>
+            <td class="account-key">records as</td>
+            <td class="account-value">Jack Finio</td>
+          </tr>
+          <tr>
+            <td class="account-key">contact</td>
+            <td class="account-value">jfinio@gmail.com</td>
+          </tr>
+          <tr>
+            <td class="account-key">ISC roles</td>
+            <td class="account-value">Composer, Author</td>
+          </tr>
+          <tr>
+            <td class="account-key">IPI #</td>
+            <td class="account-value">I-000000229-7</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    {{card-add type="Account" click="addClick"}}
+  </div>
+{{/if}}

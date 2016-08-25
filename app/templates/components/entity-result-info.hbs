@@ -1,0 +1,42 @@
+{{#if entity}}
+  <div class="info-header">
+    <img class="info-image" src="{{entityImage}}"/>
+    <div class="info-name">
+      {{entity.name}}
+      <div class="info-secondary">
+        {{secondaryText}}
+      </div>
+    </div>
+    <a href="{{entity.human_href}}" target="_blank">
+      <img class="info-provider-icon" src="{{entity.plugin.imageUrl}}"/>
+    </a>
+  </div>
+
+  {{#if albums}}
+    <div class="media-group">
+      <div class="media-header">Popular Albums</div>
+      {{#each albums as |album|}}
+      <a href="{{album.href}}" target="_blank">
+        <div class="media-entry">
+          <img class="media-image" src="{{album.image}}"/>
+          <div class="media-title">{{album.name}}</div>
+        </div>
+      </a>
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if topTracks}}
+    <div class="media-group">
+      <div class="media-header">Top Tracks</div>
+      {{#each topTracks as |track|}}
+      <a href="{{track.href}}" target="_blank">
+        <div class="media-entry">
+          <img class="media-image" src="{{track.image}}"/>
+          <div class="media-title">{{track.name}}</div>
+        </div>
+      </a>
+      {{/each}}
+    </div>
+  {{/if}}
+{{/if}}

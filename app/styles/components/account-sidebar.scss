@@ -1,0 +1,9 @@
+.cs-sidebar {
+  background-color: $light-gray;
+  padding: $sidebar-padding;
+  height: 100%;
+  border-right: 1px solid $light-gray3;
+  
+  @import "./account-add";
+  @import "./account-avatar";
+}

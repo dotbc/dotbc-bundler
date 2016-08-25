@@ -1,0 +1,17 @@
+<div class="cs-card-summary cs-card-summary-layout {{work.typeClassName}}" {{action "goToWork" work}}>
+  {{card-work-type work=work cardType="Summary"}}
+  <div class="work-content">
+    {{!TODO Clean up the artist field logic in the line below}}
+    <div class="work-artist">{{if work.metadata.mainartist work.metadata.mainartist.firstObject.name work.metadata.writers.firstObject.name}}</div>
+    <div class="work-title">{{work.name}}</div>
+  </div>
+  <div class="work-links" {{action "sendToMonegraph" work}}>
+    {{#if work.isRecording}}
+      {{icon-composition}}
+    {{else if work.isComposition}}
+      {{icon-recording}}
+    {{/if}}
+    <span class="links-text">{{placeholderText}}</span>
+    <span class="icon-monegraph-m"></span>
+  </div>
+</div>

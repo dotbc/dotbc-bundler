@@ -1,0 +1,14 @@
+.cs-card-container {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > .ember-view {
+    display: inline-block;
+  }
+}
+
+.cs-card-add {
+  @include add-new-card;
+  margin: 5px;
+}

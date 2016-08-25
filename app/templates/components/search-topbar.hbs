@@ -1,0 +1,12 @@
+<div class="cs-search-topbar">
+  <span class="{{unless showingCompositions 'off'}}" {{action 'toggleWorkType' 'Compositions'}}>{{icon-composition}}</span>
+  <span class="{{unless showingRecordings 'off'}}" {{action 'toggleWorkType' 'Recordings'}}>{{icon-recording}}</span>
+  <div class="cs-search-divider cs-search-margin"></div>
+  {{fa-icon "search"}}
+  <input id="works-search" type="text" placeholder="Search your library" class="cs-library-search cs-search-margin"
+    {{action "keyPress" on="keyUp"}}>
+  <div class="cs-search-tag-container">
+    <!--<span class="cs-search-tag">2008</span>
+    <span class="cs-search-tag">magic tricks</span>-->
+  </div>
+</div>

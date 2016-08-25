@@ -1,0 +1,85 @@
+.cs-card-summary {
+  background-color: white;
+  @include card-shadow;
+  display: inline-flex;
+  flex-direction: column;
+  width: 300px;
+
+  .work-type {
+    @include card-work-type;
+  }
+
+  .work-content {
+    flex: 1;
+    padding: 40px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .work-artist {
+      font-size: $font-size - .2;
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+
+    .work-title {
+      font-size: $font-size;
+      margin-bottom: 10px;
+    }
+  }
+
+  .work-links {
+    padding: 5px 5px 5px 10px;
+    font-size: x-small;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    $icon-size: $font-size + .2;
+
+    & > .ember-view {
+      display: inline-block;
+      height: $icon-size;
+    }
+
+    svg {
+      margin-right: 5px;
+      height: $icon-size;
+      width: $icon-size;
+    }
+    .links-text {
+      flex: 1;
+    }
+    .icon-monegraph-m {
+      font-size: small;
+    }
+  }
+
+  &.cs-work-recording {
+    .work-type {
+      color: $blue;
+      border-bottom: 1px $light-blue solid;
+    }
+
+    .work-links {
+      color: $blue;
+      background-color: $light-blue;
+      svg g {
+        fill: $blue;
+      }
+    }
+  }
+
+  &.cs-work-composition {
+    .work-type {
+      color: $green;
+      border-bottom: 1px $light-green solid;
+    }
+    .work-links {
+      color: $green;
+      background-color: $light-green;
+      svg g path {
+        fill: $green;
+      }
+    }
+  }
+}

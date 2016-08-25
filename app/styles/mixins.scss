@@ -1,0 +1,67 @@
+@mixin x-browser($property, $value...) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin card-shadow() {
+  @include x-browser(box-shadow, 0 2px 4px 0 rgba(0,0,0,.25));
+}
+
+@mixin generic-shadow() {
+  @include x-browser(box-shadow, 0 0px 4px 0 rgba(0,0,0,.5));
+}
+
+@mixin vertical-center-absolute() {
+  position: absolute;
+  top: 50%;
+  @include x-browser(transform, translateY(-50%));
+}
+
+@mixin add-new-card() {
+  $border-width: 1px;
+  border: $border-width dashed $dark-gray2;
+  width: $card-summary-width - 2 * $border-width;
+  min-height: $card-summary-min-height;
+  display: flex;
+  align-items: center;
+
+  div {
+    text-align: center;
+    width: 100%;
+    color: $dark-gray2;
+    font-weight: 300;
+  }
+}
+
+@mixin card-work-type() {
+  $card-icon-size: 50px;
+  $icon-left-padding: 10px;
+  text-align: right;
+  padding: 10px 5px 5px 5px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: $font-size - .4;
+  position: relative;
+
+  span {
+    opacity: 0.5;
+    margin-left: $card-icon-size + 2.5 * $icon-left-padding;
+  }
+
+  & > svg {
+    position: absolute;
+    width: $card-icon-size;
+    height: $card-icon-size;
+    left: $icon-left-padding;
+    top: 100%;
+    @include x-browser(transform, translateY(-50%));
+  }
+}
+
+@mixin gray-right-pane() {
+  background-color: $light-gray4;
+  padding: 15px 20px;
+  max-width: 225px;
+}

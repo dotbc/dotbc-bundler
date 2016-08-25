@@ -1,0 +1,15 @@
+{{#modal-dialog
+  overlay-class="cs-modal-overlay"
+  container-class="cs-login-container"}}
+  <div class="login-header">Welcome to dotBC</div>
+  <div class="cs-login-input-container">
+    {{#if errormessage}}
+      <div class="errormessage">{{errormessage}}</div>
+    {{/if}}
+    {{input class="cs-login-input-layout" type="text" placeholder="Username (Email)" value=username enter="login"}}
+    {{input class="cs-login-input-layout" type="password" placeholder="Password" value=password enter="login"}}
+    <button class="cs-login-button cs-login-input-layout" {{action "login"}}>
+      Login
+    </button>
+  </div>
+{{/modal-dialog}}

@@ -1,0 +1,16 @@
+.cs-card-container {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > .ember-view {
+    display: inline-block;
+  }
+
+  .cs-card-summary-layout, .cs-card-add {
+    min-height: $card-summary-min-height;
+    display: inline-flex;
+    margin: 5px;
+    cursor: pointer;
+  }
+}

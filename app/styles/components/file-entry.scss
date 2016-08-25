@@ -1,0 +1,126 @@
+.cs-file{
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size - .1;
+  font-weight: 300;
+  color: black;
+  margin-left: -5px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  border-radius: 4px;
+  $animation-timing: 0.2s;
+  @include x-browser(transition, padding $animation-timing, background-color $animation-timing, box-shadow $animation-timing);
+  cursor: pointer;
+
+  &:hover, &.expanded {
+    background-color: white;
+    @include generic-shadow;
+    padding: 10px;
+    margin: 5px 0 5px -5px;
+
+    svg path{
+      fill: black;
+    }
+
+    .cs-file-information .cs-file-expand {
+      opacity: 1;
+    }
+  }
+
+  .cs-file-information {
+    display: flex;
+    $icon-size: 18px;
+    $icon-margin: 5px;
+
+    svg {
+      flex-shrink: 0;
+      width: $icon-size;
+      height: $icon-size;
+      margin-right: $icon-margin;
+      path {
+        @include x-browser(transition, fill $animation-timing);
+      }
+    }
+
+    .cs-file-name {
+      flex: 1;
+    }
+
+    .cs-file-expand {
+      margin-top: 1px;
+      margin-left: 3px;
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      opacity: 0;
+      @include x-browser(transition, opacity $animation-timing);
+    }
+
+    .cs-audio-pause {
+      width: $icon-size;
+      height: $icon-size;
+      margin-right: $icon-margin;
+    }
+  }
+
+  .cs-file-preview {
+    display: flex;
+    margin-top: 10px;
+
+    .audio-progress {
+      flex: 1;
+      position: relative;
+
+      .audio-gray, .audio-red {
+        height: 6px;
+        border-radius: 3px;
+        @include vertical-center-absolute;
+      }
+
+      .audio-gray {
+        background-color: $light-gray3;
+        width: 100%;
+      }
+
+      .audio-red {
+        background-color: $red;
+        width: 0%;
+        @include x-browser(transition, width 0.2s);
+      }
+
+    }
+
+    .audio-time {
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .cs-image-preview {
+      width: 100%;
+      height: 100%;
+    }
+
+    .cs-text-preview {
+      font-size: $font-size - .15;
+    }
+  }
+
+  .cs-file-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .upload-text{
+      text-transform: uppercase;
+      color: black;
+      font-size: $font-size - .2;
+      font-weight: 600;
+    }
+
+    .controls-delete {
+      cursor: pointer;
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.cs-account-card-expanded-container{
+  display: flex;
+  justify-content: center;
+
+  .cs-account-card-expanded {
+    display: flex;
+    height: 300px;
+    min-width: 600px;
+    background-color: white;
+    @include card-shadow;
+
+    .media-container {
+      display: flex;
+      flex-direction: column;
+      $image-size: 150px;
+
+      .cs-account-image {
+        width: $image-size;
+        height: $image-size;
+        padding: 30px 0 0 30px;
+
+        img {
+          border: 1px solid $light-gray;
+        }
+      }
+
+      span {
+        padding: 20px 0  5px 30px ;
+        text-transform: uppercase;
+        font-size: $font-size - .3;
+        color: $medium-gray;
+      }
+
+      .cs-account-verifications{
+        padding-left: 30px;
+        background-color: transparent;
+
+        .account-verification-icon {
+          margin-right: 10px;
+          cursor: pointer;
+          border-radius: 8px;
+
+          &:hover {
+            @include generic-shadow;
+          }
+        }
+      }
+    }
+    .cs-account-info-container{
+      flex: 1;
+      padding: 30px 0 0 20px;
+    }
+
+    .cs-account-header {
+      border-bottom: 1px solid $light-gray;
+
+      .cs-account-name {
+        margin-left: 10px;
+        color: black;
+        font-size: $font-size + .25;
+      }
+    }
+
+    .expanded-account-info-table {
+      margin: 15px 0 0 10px;
+      $table-padding: 0 10px 10px 0;
+
+      .account-key {
+        text-transform: uppercase;
+        color: $medium-gray;
+        font-size: $font-size - .25;
+        padding: $table-padding;
+      }
+
+      .account-value {
+        font-size: $font-size -.25;
+        font-weight: 300;
+        color: black;
+        padding: $table-padding;
+      }
+    }
+
+    .work-edit-icon {
+      position: relative;
+      align-self: baseline;
+      cursor: pointer;
+      width:15px;
+      padding: 10px 10px 0 0;
+    }
+  }
+}
