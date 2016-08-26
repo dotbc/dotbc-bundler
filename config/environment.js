@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'cardstack-desktop',
+    modulePrefix: 'dotbc-desktop',
     environment: environment,
     baseURL: '/',
     locationType: process.env.EMBER_CLI_ELECTRON ? 'hash' : 'auto',

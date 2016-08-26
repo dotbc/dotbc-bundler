@@ -1,7 +1,7 @@
 /* jshint node: true */
 'use strict';
 
-const debug                = require('debug')('cardstack-desktop');
+const debug                = require('debug')('dotbc-desktop');
 const electron             = require('electron');
 const path                 = require('path');
 const plugins              = require('./lib/plugins');

@@ -1,4 +1,4 @@
-DEBUG?="cardstack*,superagent*,spotify*,bmi*"
+DEBUG?="dotbc*,superagent*,spotify*,bmi*"
 PLUGINS=bmi monegraph spotify
 
 build: 
