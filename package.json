@@ -1,7 +1,7 @@
 {
-  "name": "cardstack-desktop",
+  "name": "dotbc-desktop",
   "version": "0.0.0",
-  "description": "Small description for cardstack-desktop goes here",
+  "description": "Small description for dotbc-desktop goes here",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -100,7 +100,7 @@
     }
   },
   "dependencies": {
-    "cardstack-plugin-manager": "git+ssh://git@github.com/dotbc/cardstack-plugin-manager.git",
+    "dotbc-plugin-manager": "git+ssh://git@github.com/dotbc/dotbc-plugin-manager.git",
     "debug": "^2.2.0",
     "electron-debug": "^1.0.0",
     "extend": "^3.0.0",
