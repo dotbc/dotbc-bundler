@@ -14,8 +14,7 @@ build-electron-prod:
 	./scripts/electron/mac/package-prod.sh
 
 install: install-tools
-	npm i; \
-  bower install;
+	npm i;
 
 install-plugins:
 	-mkdir .plugins

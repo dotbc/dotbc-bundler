@@ -9,6 +9,8 @@
   },
   "scripts": {
     "build": "ember build",
+    "electron": "ember electron",
+    "postinstall": "bower install",
     "start": "ember server",
     "test": "ember test"
   },
